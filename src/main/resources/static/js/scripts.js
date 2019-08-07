@@ -83,8 +83,14 @@ function addComputer() {
 function post() {
   showLoader()
   var computer = ComputerBinder.fromDom()
+  var noIdComputer = {
+      name: computer.name,
+      price: computer.price,
+      isInStock: computer.isInStock,
+      releaseDate: computer.releaseDate
+  }
   axios
-    .put('/post', computer)
+    .post('/post', noIdComputer)
     .then(success => {
       alert('computer successfully added!')
       location.reload()

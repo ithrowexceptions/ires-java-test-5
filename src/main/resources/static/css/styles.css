@@ -6,10 +6,16 @@ body {
     max-width: 700px;
 }
 
-h1, h2 {
+h1 {
     text-align: center;
     margin: 0.75em;
     padding: 0.25em;
+}
+
+h2 {
+    text-align: center;
+    margin: 0.50em;
+    padding: 0.15em;
 }
 
 table button {
@@ -61,4 +67,12 @@ td:nth-child(2) {
 .form-control {
     width: auto;
     height: auto;
+}
+
+.col-md-6 {
+    padding: 0.75em;
+}
+
+.form-group {
+    margin: 0.75em;
 }

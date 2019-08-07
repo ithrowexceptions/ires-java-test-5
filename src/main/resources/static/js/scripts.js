@@ -75,10 +75,22 @@ function deleteComputer(id) {
 }
 
 function addComputer() {
-    var tbody = document.getElementById('rows');
-    var data
-    data.name = tbody.children[0].innerText
-    data.price = parseFloat(tbody.children[1].innerText)
+    showDetailsSection()
+    document.getElementById
+    // post()
+}
+
+function post() {
+  showLoader()
+  var computer = ComputerBinder.fromDom()
+  axios
+    .put('/post', computer)
+    .then(success => {
+      alert('computer successfully added!')
+      location.reload()
+    })
+    .catch(err => alert(err))
+    .finally(() => hideLoader())
 }
 
 function showLoader() {

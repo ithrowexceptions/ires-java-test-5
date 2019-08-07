@@ -30,7 +30,7 @@ function loadComputers() {
         clone.children[1].innerText = `${c.price} €`
         clone.children[2].children[0].onclick = () => showDetails(c.id)
         clone.children[3].children[0].onclick = () => deleteComputer(c.id)
-
+        clone.style.display = 'table-row';
         tbody.appendChild(clone)
       }
     })
@@ -39,8 +39,8 @@ function loadComputers() {
 }
 
 function showDetails(id) {
-  showDetailsSection()
   showLoader()
+  showDetailsSection()
   axios
     .get('/get/' + id)
     .then(success => ComputerBinder.toDom(success.data))
@@ -58,7 +58,7 @@ function put() {
       location.reload()
     })
     .catch(err => alert(err))
-    hideLoader()
+    .finally(() => hideLoader())
 }
 
 function deleteComputer(id) {

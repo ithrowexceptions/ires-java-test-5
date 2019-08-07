@@ -39,6 +39,7 @@ function loadComputers() {
 }
 
 function showDetails(id) {
+  document.getElementById('save').onclick = put
   showLoader()
   showDetailsSection()
   axios
@@ -76,8 +77,7 @@ function deleteComputer(id) {
 
 function addComputer() {
     showDetailsSection()
-    document.getElementById
-    // post()
+    document.getElementById('save').onclick = post
 }
 
 function post() {

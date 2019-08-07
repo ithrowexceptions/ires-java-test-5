@@ -76,3 +76,7 @@ td:nth-child(2) {
 .form-group {
     margin: 0.75em;
 }
+
+#add-computer-button {
+    margin: 0.75em;
+}

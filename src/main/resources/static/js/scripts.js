@@ -3,7 +3,7 @@ const ComputerBinder = {
     document.querySelector('[name=id]').value = computer.id
     document.querySelector('[name=name]').value = computer.name
     document.querySelector('[name=price]').value = computer.price
-    document.querySelector('[name=IsInStock]').checked = computer.isInStock
+    document.querySelector('[name=isInStock]').checked = computer.isInStock
     document.querySelector('[name=releaseDate]').value = computer.releaseDate
   },
   fromDom: function() {
@@ -75,7 +75,10 @@ function deleteComputer(id) {
 }
 
 function addComputer() {
-
+    var tbody = document.getElementById('rows');
+    var data
+    data.name = tbody.children[0].innerText
+    data.price = parseFloat(tbody.children[1].innerText)
 }
 
 function showLoader() {
